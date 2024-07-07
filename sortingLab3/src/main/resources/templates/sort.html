@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sorting Algorithms</title>
+</head>
+<body>
+<h1>Sorting Algorithms</h1>
+<form method="post" action="/sort">
+    <label for="data">Enter data (comma-separated):</label>
+    <input type="text" id="data" name="data">
+    <label for="algorithm">Select sorting algorithm:</label>
+    <select id="algorithm" name="algorithm">
+        <option value="heap">Heap Sort</option>
+        <option value="quick">Quick Sort</option>
+        <option value="merge">Merge Sort</option>
+        <option value="radix">Radix Sort</option>
+        <option value="bucket">Bucket Sort</option>
+    </select>
+
+    <button type="submit">Sort</button>
+</form>
+
+<div>
+    <h2>Sorted Data:</h2>
+    <p th:text="${sortedData}"></p>
+</div>
+</body>
+</html>
